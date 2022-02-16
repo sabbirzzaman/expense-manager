@@ -5,11 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Manager</title>
+    <!-- Link CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Hello world</h1>
+    <main>
+        <!-- Site heading start -->
+        <section>
+            <div class="container">
+                <h1 class="site-heading">Expense Manager</h1>
+            </div>
+        </section>
+        <!-- Site heading End -->
 
+        <!-- Expenses Area Starts -->
+        <section>
+            <div class="container expenses-container">
+                <div class="expenses-image">
+                    <img src="./images/image.jpg" alt="Image">
+                </div>
+                
+                <div class="expenses-form">
+                    <div class="income">
+                        <h4>Income</h4>
+                        <label>Income:<input type="text"></label>
+                    </div>
+    
+                    <div class="expenses">
+                        <h4>Expenses</h4>
+                        <label>Food:<input type="text"></label>
+                        <label>Rent:<input type="text"></label>
+                        <label>Clothes:<input type="text"></label>
+                        <button class="btn-primary">Calculate</button>
+                    </div>
+    
+                    <div class="total-expenses">
+                        <p>Total Expenses: <span>5500</span></p>
+                    </div>
+    
+                    <div class="total-balance">
+                        <p>Balance: <span>4500</span></p>
+                    </div>
+    
+                    <div class="saving-section">
+                        <label>save:<input type="text"></label>
+                        <span>%</span>
+                        <button class="btn-primary">Save</button>
+                    </div>
+    
+                    <div class="saving-amount">
+                        <p>Saving Amount: <span>2000</span></p>
+                    </div>
+    
+                    <div class="remaining-balance">
+                        <p>Remaining Balance: <span>2500</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Expenses Area End -->
+    </main>
+
+    <!-- Link JavaScript -->
     <script src="./assets/js/app.js"></script>
 </body>
 </html>

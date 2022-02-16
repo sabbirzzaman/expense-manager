@@ -1,3 +1,41 @@
-h1 {
-    color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --primary-color: rgb(87, 162, 255);
+    --light-gray: rgb(220, 220, 220);
+    --gray-bg: rgb(248, 248, 248);
+    --white: rgb(255, 255, 255);
+    --dark: rgb(0, 0, 0); 
+
+    --heading-lg: 48px;
+    --heading-sm: 22px;
+    --btn-text: 20px;
+    --text: 18px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.site-heading {
+    color: var(--primary-color);
+    font-size: var(--heading-lg);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.expenses-container {
+    display: flex;
+    padding-bottom: 50px;
 }
