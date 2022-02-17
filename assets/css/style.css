@@ -47,12 +47,11 @@ input[type=text] {
     border: 0;
     border-radius: 4px;
 }
-/* 
+
 label {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-} */
+    display: block;
+    margin-bottom: 10px;
+}
 
 .container {
     max-width: 1140px;

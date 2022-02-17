@@ -33,7 +33,7 @@
               <label>
                 <p>Income:</p>
                 <input id="income" type="text" placeholder="Eg. 10000" />
-                <p class="error income-error"></p>
+                <p class="error" id="income-error"></p>
               </label>
             </div>
 
@@ -42,35 +42,33 @@
               <label>
                 <p>Food:</p>
                 <input id="food" type="text" placeholder="Eg. 3000" />
-                <p class="error food-error"></p>
+                <p class="error" id="food-error"></p>
               </label>
-              <br />
 
               <label>
                 <p>Rent:</p>
                 <input id="rent" type="text" placeholder="Eg. 2000" />
-                <p class="error rent-error"></p>
+                <p class="error" id="rent-error"></p>
               </label>
 
-              <br />
               <label>
                 <p>Clothes:</p>
                 <input id="clothes" type="text" placeholder="Eg. 500" />
-                <p class="error clothes-error"></p>
+                <p class="error" id="clothes-error"></p>
               </label>
-              <br />
 
               <div class="button">
                 <button id="expenses-btn" class="btn-primary">Calculate</button>
+                <p class="error" id="total-error"></p>
               </div>
             </div>
 
             <div class="total-expenses">
-              <h4>Total Expenses: <span id="total-expenses">5500</span></h4>
+              <h4>Total Expenses: <span id="total-expenses">0</span></h4>
             </div>
 
             <div class="total-balance">
-              <h4>Balance: <span id="total-balance">4500</span></h4>
+              <h4>Balance: <span id="total-balance">0</span></h4>
             </div>
             <!-- Expenses Area End -->
 
@@ -85,11 +83,11 @@
             </div>
 
             <div class="saving-amount">
-              <h4>Saving Amount: <span>2000</span></h4>
+              <h4>Saving Amount: <span>0</span></h4>
             </div>
 
             <div class="remaining-balance">
-              <h4>Remaining Balance: <span>2500</span></h4>
+              <h4>Remaining Balance: <span>0</span></h4>
             </div>
             <!-- Savings Area End -->
           </div>
