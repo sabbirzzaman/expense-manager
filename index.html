@@ -27,28 +27,32 @@
                 </div>
                 
                 <div class="expenses-form">
+                    <!-- Expenses Area Start -->
                     <div class="income">
                         <h4>Income</h4>
-                        <label>Income:<input type="text" placeholder="Eg. 10000"></label>
+                        <label>Income:<input id="income" type="text" placeholder="Eg. 10000"></label>
                     </div>
     
                     <div class="expenses">
                         <h4>Expenses</h4>
-                        <label>Food:<input type="text" placeholder="Eg. 3000"></label><br>
-                        <label>Rent:<input type="text" placeholder="Eg. 2000"></label><br>
-                        <label>Clothes:<input type="text" placeholder="Eg. 500"></label><br>
-                        <button class="btn-primary">Calculate</button>
+                        <label>Food:<input id="food" type="text" placeholder="Eg. 3000"></label><br>
+                        <label>Rent:<input id="rent" type="text" placeholder="Eg. 2000"></label><br>
+                        <label>Clothes:<input id="clothes" type="text" placeholder="Eg. 500"></label><br>
+
+                        <button id="expenses-btn" class="btn-primary">Calculate</button>
                     </div>
     
                     <div class="total-expenses">
-                        <h4>Total Expenses: <span>5500</span></h4>
+                        <h4>Total Expenses: <span id="total-expenses">5500</span></h4>
                     </div>
     
                     <div class="total-balance">
-                        <h4>Balance: <span>4500</span></h4>
+                        <h4>Balance: <span id="total-balance">4500</span></h4>
                     </div>
+                    <!-- Expenses Area End -->
     
-                    <div class="saving-section">
+                    <!-- Savings Area Start -->
+                    <div class="savings-section">
                         <label>Save:<input id="save-input" type="text" placeholder="Eg. 20"></label>
                         <span>%</span>
                         <button class="btn-primary">Save</button>
@@ -61,6 +65,7 @@
                     <div class="remaining-balance">
                         <h4>Remaining Balance: <span>2500</span></h4>
                     </div>
+                    <!-- Savings Area End -->
                 </div>
             </div>
         </section>
