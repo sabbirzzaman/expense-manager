@@ -1,13 +1,15 @@
 // Select elements
 const expensesBtn = document.getElementById('expenses-btn');
+const saveBtn = document.getElementById('save-btn');
 
 const incomeInput = document.getElementById('income');
 const foodInput = document.getElementById('food');
 const rentInput = document.getElementById('rent');
 const clothesInput = document.getElementById('clothes');
+const incomeElement = document.getElementById('hidden-value');
 
 // Input field value
-function expenseAmount(amountInput) {
+function calculateAmount(amountInput) {
   const amountText = amountInput.value;
   const amount = parseFloat(amountText);
 
@@ -21,7 +23,7 @@ function inputError(inputName, errorName) {
     errorName.innerText = 'Please Enter a Positive Value';
   } else if (isNaN(inputName)) {
     errorName.innerText = 'Invalid Input: Please Enter a Number Value';
-  } else if (inputName > 0 && isNaN(inputName) == false){
+  } else if (inputName > 0 && isNaN(inputName) == false) {
     errorName.innerText = '';
   }
 }
@@ -40,10 +42,10 @@ expensesBtn.addEventListener('click', function () {
   const totalError = document.getElementById('total-error');
 
   // Input calculation
-  const income = expenseAmount(incomeInput);
-  const food = expenseAmount(foodInput);
-  const rent = expenseAmount(rentInput);
-  const clothes = expenseAmount(clothesInput);
+  const income = calculateAmount(incomeInput);
+  const food = calculateAmount(foodInput);
+  const rent = calculateAmount(rentInput);
+  const clothes = calculateAmount(clothesInput);
 
   // Total expense amount
   const totalExpensesAmount = food + rent + clothes;
@@ -52,11 +54,15 @@ expensesBtn.addEventListener('click', function () {
   if (income > 0 && totalExpensesAmount < income) {
     totalExpenses.innerText = totalExpensesAmount;
     totalBalance.innerText = income - totalExpensesAmount;
+    incomeElement.innerText = income;
   }
 
   // total calculation error
-  if(totalExpensesAmount > income) {
-    totalError.innerText = "Invalid Input: Total expenses can't be bigger then Income";
+  if (totalExpensesAmount > income) {
+    totalError.innerText =
+      "Invalid Input: Expenditure can't be bigger than Income";
+  } else if (totalExpensesAmount < income) {
+    totalError.innerText = '';
   }
 
   // Add Errors to the input
@@ -64,4 +70,18 @@ expensesBtn.addEventListener('click', function () {
   inputError(food, foodError);
   inputError(rent, rentError);
   inputError(clothes, clothesError);
+});
+
+// Savings area event listener
+saveBtn.addEventListener('click', function () {
+  const savingElement = document.getElementById('saving-amount');
+  const savingInput = document.getElementById('save-input');
+
+  const saving = calculateAmount(savingInput);
+
+  const incomeValue = parseFloat(incomeElement.innerText);
+
+  const savingAmount = incomeValue * saving / 100;
+
+  savingElement.innerText = savingAmount;
 });

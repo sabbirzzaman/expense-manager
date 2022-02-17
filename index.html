@@ -26,7 +26,7 @@
             <img src="./images/image.jpg" alt="Image" />
           </div>
 
-          <div class="expenses-form">
+          <div id="form" class="expenses-form">
             <!-- Expenses Area Start -->
             <div class="income">
               <h4>Income</h4>
@@ -69,6 +69,7 @@
 
             <div class="total-balance">
               <h4>Balance: <span id="total-balance">0</span></h4>
+              <h4 id="hidden-value"></h4>
             </div>
             <!-- Expenses Area End -->
 
@@ -79,15 +80,15 @@
                 <input id="save-input" type="text" placeholder="Eg. 20" />
               </label>
               <span>%</span>
-              <button class="btn-primary">Save</button>
+              <button id="save-btn" class="btn-primary">Save</button>
             </div>
 
             <div class="saving-amount">
-              <h4>Saving Amount: <span>0</span></h4>
+              <h4>Saving Amount: <span id="saving-amount">0</span></h4>
             </div>
 
             <div class="remaining-balance">
-              <h4>Remaining Balance: <span>0</span></h4>
+              <h4>Remaining Balance: <span id="remaining-balance">0</span></h4>
             </div>
             <!-- Savings Area End -->
           </div>

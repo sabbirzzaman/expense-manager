@@ -37,6 +37,7 @@ h4 {
 
 img {
     width: 100%;
+    border-radius: 8px;
 }
 
 input[type=text] {
@@ -44,7 +45,7 @@ input[type=text] {
     margin-bottom: 5px;
     padding: 10px 15px;
     background-color: var(--light-gray);
-    border: 0;
+    border: none;
     border-radius: 4px;
 }
 
@@ -90,6 +91,7 @@ label {
 .expenses-form {
     padding: 30px;
     background-color: var(--gray-bg);
+    border-radius: 8px;
 }
 
 .button {
@@ -111,10 +113,10 @@ label {
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 0;
 }
 
 #save-input {
-    width: 70%;
     margin-bottom: 0;
 }
 
@@ -122,6 +124,14 @@ label {
     font-size: 13px;
     color: var(--error);
     text-align: left;
+}
+
+#total-error {
+    margin-top: 10px;
+}
+
+#hidden-value {
+    display: none;
 }
 
 /* Mobile responsive */
