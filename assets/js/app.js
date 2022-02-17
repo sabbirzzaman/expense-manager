@@ -97,9 +97,8 @@ saveBtn.addEventListener('click', function () {
   if (balanceAmount >= savingAmountTotal) {
     savingElement.innerText = savingAmountTotal;
     remainingBalanceElement.innerText = remainingBalance;
+    savingError.innerText = ""
   } else if (balanceAmount < savingAmountTotal) {
     savingError.innerText = "Invalid Input: You don't have enough money to save"
   }
-
-  inputError(saving, savingError);
 });
