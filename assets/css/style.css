@@ -106,7 +106,8 @@ label {
     display: flex;
     gap: 10px;
     align-items: center;
-    margin: 20px 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .savings {
@@ -132,6 +133,10 @@ label {
 
 #hidden-value {
     display: none;
+}
+
+#saving-error {
+    margin-bottom: 20px;
 }
 
 /* Mobile responsive */

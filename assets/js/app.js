@@ -74,14 +74,32 @@ expensesBtn.addEventListener('click', function () {
 
 // Savings area event listener
 saveBtn.addEventListener('click', function () {
+  // Select saving elements
   const savingElement = document.getElementById('saving-amount');
   const savingInput = document.getElementById('save-input');
+  const balanceElement = document.getElementById('total-balance');
+  const remainingBalanceElement = document.getElementById('remaining-balance');
+  const savingError = document.getElementById('saving-error');
 
+  // saving parentage
   const saving = calculateAmount(savingInput);
 
+  // Income input amount
   const incomeValue = parseFloat(incomeElement.innerText);
+  const balanceAmount = parseFloat(balanceElement.innerText);
 
-  const savingAmount = incomeValue * saving / 100;
+  // total saving amount
+  const savingAmountTotal = (incomeValue * saving) / 100;
 
-  savingElement.innerText = savingAmount;
+  // Total remaining balance
+  const remainingBalance = balanceAmount - savingAmountTotal;
+
+  if (balanceAmount >= savingAmountTotal) {
+    savingElement.innerText = savingAmountTotal;
+    remainingBalanceElement.innerText = remainingBalance;
+  } else if (balanceAmount < savingAmountTotal) {
+    savingError.innerText = "Invalid Input: You don't have enough money to save"
+  }
+
+  inputError(saving, savingError);
 });
