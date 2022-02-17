@@ -8,9 +8,10 @@
     --hover: rgb(46, 122, 216);
     --white: rgb(255, 255, 255);
     --dark: rgb(0, 0, 0); 
+    --error: rgb(231, 76, 60);
 
     --heading-lg: 48px;
-    --heading-sm: 22px;
+    --heading-sm: 20px;
     --btn-text: 20px;
     --text: 18px;
 }
@@ -31,7 +32,7 @@ h4 {
     font-size: var(--heading-sm);
     font-weight: 500;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 img {
@@ -39,18 +40,19 @@ img {
 }
 
 input[type=text] {
-    margin-left: 15px;
+    width: 100%;
+    margin-bottom: 5px;
     padding: 10px 15px;
     background-color: var(--light-gray);
     border: 0;
     border-radius: 4px;
 }
-
+/* 
 label {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
+} */
 
 .container {
     max-width: 1140px;
@@ -87,13 +89,16 @@ label {
 }
 
 .expenses-form {
-    padding: 50px;
+    padding: 30px;
     background-color: var(--gray-bg);
+}
+
+.button {
     text-align: center;
 }
 
 .income, .expenses {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .savings-section {
@@ -103,8 +108,21 @@ label {
     margin: 20px 0;
 }
 
+.savings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 #save-input {
-    width: 50%;
+    width: 70%;
+    margin-bottom: 0;
+}
+
+.error {
+    font-size: 13px;
+    color: var(--error);
+    text-align: left;
 }
 
 /* Mobile responsive */

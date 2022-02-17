@@ -1,78 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense Manager</title>
     <!-- Link CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
-</head>
-<body>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <main>
-        <!-- Site heading start -->
-        <section>
-            <div class="container">
-                <h1 class="site-heading">Expense Manager</h1>
-            </div>
-        </section>
-        <!-- Site heading End -->
+      <!-- Site heading start -->
+      <section>
+        <div class="container">
+          <h1 class="site-heading">Expense Manager</h1>
+        </div>
+      </section>
+      <!-- Site heading End -->
 
-        <!-- Expenses Area Starts -->
-        <section>
-            <div class="container expenses-container">
-                <div class="expenses-image">
-                    <img src="./images/image.jpg" alt="Image">
-                </div>
-                
-                <div class="expenses-form">
-                    <!-- Expenses Area Start -->
-                    <div class="income">
-                        <h4>Income</h4>
-                        <label>Income:<input id="income" type="text" placeholder="Eg. 10000"></label>
-                    </div>
-    
-                    <div class="expenses">
-                        <h4>Expenses</h4>
-                        <label>Food:<input id="food" type="text" placeholder="Eg. 3000"></label><br>
-                        <label>Rent:<input id="rent" type="text" placeholder="Eg. 2000"></label><br>
-                        <label>Clothes:<input id="clothes" type="text" placeholder="Eg. 500"></label><br>
+      <!-- Expenses Area Starts -->
+      <section>
+        <div class="container expenses-container">
+          <div class="expenses-image">
+            <img src="./images/image.jpg" alt="Image" />
+          </div>
 
-                        <button id="expenses-btn" class="btn-primary">Calculate</button>
-                    </div>
-    
-                    <div class="total-expenses">
-                        <h4>Total Expenses: <span id="total-expenses">5500</span></h4>
-                    </div>
-    
-                    <div class="total-balance">
-                        <h4>Balance: <span id="total-balance">4500</span></h4>
-                    </div>
-                    <!-- Expenses Area End -->
-    
-                    <!-- Savings Area Start -->
-                    <div class="savings-section">
-                        <label>Save:<input id="save-input" type="text" placeholder="Eg. 20"></label>
-                        <span>%</span>
-                        <button class="btn-primary">Save</button>
-                    </div>
-    
-                    <div class="saving-amount">
-                        <h4>Saving Amount: <span>2000</span></h4>
-                    </div>
-    
-                    <div class="remaining-balance">
-                        <h4>Remaining Balance: <span>2500</span></h4>
-                    </div>
-                    <!-- Savings Area End -->
-                </div>
+          <div class="expenses-form">
+            <!-- Expenses Area Start -->
+            <div class="income">
+              <h4>Income</h4>
+              <label>
+                <p>Income:</p>
+                <input id="income" type="text" placeholder="Eg. 10000" />
+                <p class="error income-error"></p>
+              </label>
             </div>
-        </section>
-        <!-- Expenses Area End -->
+
+            <div class="expenses">
+              <h4>Expenses</h4>
+              <label>
+                <p>Food:</p>
+                <input id="food" type="text" placeholder="Eg. 3000" />
+                <p class="error food-error"></p>
+              </label>
+              <br />
+
+              <label>
+                <p>Rent:</p>
+                <input id="rent" type="text" placeholder="Eg. 2000" />
+                <p class="error rent-error"></p>
+              </label>
+
+              <br />
+              <label>
+                <p>Clothes:</p>
+                <input id="clothes" type="text" placeholder="Eg. 500" />
+                <p class="error clothes-error"></p>
+              </label>
+              <br />
+
+              <div class="button">
+                <button id="expenses-btn" class="btn-primary">Calculate</button>
+              </div>
+            </div>
+
+            <div class="total-expenses">
+              <h4>Total Expenses: <span id="total-expenses">5500</span></h4>
+            </div>
+
+            <div class="total-balance">
+              <h4>Balance: <span id="total-balance">4500</span></h4>
+            </div>
+            <!-- Expenses Area End -->
+
+            <!-- Savings Area Start -->
+            <div class="savings-section">
+              <label class="savings">
+                <span>Save:</span>
+                <input id="save-input" type="text" placeholder="Eg. 20" />
+              </label>
+              <span>%</span>
+              <button class="btn-primary">Save</button>
+            </div>
+
+            <div class="saving-amount">
+              <h4>Saving Amount: <span>2000</span></h4>
+            </div>
+
+            <div class="remaining-balance">
+              <h4>Remaining Balance: <span>2500</span></h4>
+            </div>
+            <!-- Savings Area End -->
+          </div>
+        </div>
+      </section>
+      <!-- Expenses Area End -->
     </main>
 
     <!-- Link JavaScript -->
     <script src="./assets/js/app.js"></script>
-</body>
+  </body>
 </html>

@@ -1,23 +1,36 @@
 const expensesBtn = document.getElementById('expenses-btn');
 
-function inputAmount(inputId) {
-    const amountElement = document.getElementById(inputId);
-    const totalAmountText = amountElement.value;
-    const totalAmount = parseFloat(totalAmountText);
+const incomeInput = document.getElementById('income');
+const foodInput = document.getElementById('food');
+const rentInput = document.getElementById('rent');
+const clothesInput = document.getElementById('clothes');
 
-    amountElement.value = '';
-    return totalAmount;
+
+function expenseAmount(amountInput) {
+    const amountText = amountInput.value;
+    const amount = parseFloat(amountText);
+
+    amountInput.value = '';
+    return amount;
 }
 
 expensesBtn.addEventListener('click', function() {
-    const totalExpenses = document.getElementById('total-amount');
+    const totalExpenses = document.getElementById('total-expenses');
+    const totalBalance = document.getElementById('total-balance');
 
-    const foodExpenses = inputAmount('food');
-    const rentExpenses = inputAmount('rent');
-    const clothesExpenses = inputAmount('clothes');
+    const income = expenseAmount(incomeInput);
+    
+    const food = expenseAmount(foodInput)
+    const rent = expenseAmount(rentInput)
+    const clothes = expenseAmount(clothesInput)
 
-    const newTotalExpenses = foodExpenses + rentExpenses + clothesExpenses;
-    totalExpenses.innerText = newTotalExpenses;
+    const totalExpensesAmount = food + rent + clothes;
 
-    console.log(newTotalExpenses)
+    totalExpenses.innerText = totalExpensesAmount;
+    totalBalance.innerText = income - totalExpensesAmount;
+
 })
+
+
+// Invalid Input: Please Enter a Number Value
+// Invalid Input: Please Enter a Positive Value
