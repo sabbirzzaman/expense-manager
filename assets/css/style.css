@@ -37,7 +37,7 @@ h4 {
 
 img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px 0 0 10px;
 }
 
 input[type=text] {
@@ -85,13 +85,12 @@ label {
 .expenses-container {
     display: flex;
     padding-bottom: 50px;
-    gap: 50px;
 }
 
 .expenses-form {
     padding: 30px;
     background-color: var(--gray-bg);
-    border-radius: 8px;
+    border-radius: 0 10px 10px 0;
 }
 
 .button {
